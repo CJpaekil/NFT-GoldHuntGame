@@ -1,0 +1,9 @@
+.header-top
+{
+    margin-top: 5px;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }

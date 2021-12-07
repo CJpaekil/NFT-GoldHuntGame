@@ -120,30 +120,30 @@ const Index = ({
                 <Modal.Body style={{backgroundColor:"black"}}>
                     <div className="modal-container">
                         <div className="modal-left-content ">
-                     
+                            <div className="modal-main-part col-lg-7 col-md-11 col-sm-11">
                                 <p className="title-modal">WHITEPAPER</p>
-                                <div className="text-gif">
-                                    <img className="text-gif-left" src="	https://thegame.gold/assets/gif/3.gif"/>
+                                <div className="row text-gif">
+                                    <img className="text-gif-left" src="https://thegame.gold/assets/gif/3.gif"/>
                                     <span className="text-gif-right"> Once upon a time, in a faraway metaverse, a ship of eager adventurers sailed the oceans in search of new worlds. The ship’s cabin boy shouted, “Land ho! Land ho!” and the ship moored at a large, uninhabited island. By a stroke of luck, this island had an overabundance of gold deposits, so the adventurers turned into Goldminers. They ferried gold bars to the mainland and grew rich enough to hire helpers. But their fortune didn't last long. Treasure-seeking pirates heard about an island that offered a wealth of riches, and they promptly hurried to the island to rob any passing ships! </span>
                                 </div>
-                                <div className="text-gif" style={{marginTop:"30px"}}>
+                                <div className="row text-gif" style={{marginTop:"30px"}}>
                                     <span className="text-gif-right"> No one could stop the fearsome Pirates and the robberies that took place from day to day, from hour to hour. So the island’s Governor signed a treaty with the Pirates: the Goldminers would pay the Pirates a fee with <span _ngcontent-kji-c18="" class="gold">$GGOLD</span> mined for safe sailing up to the mainland. But if a Goldminer returns to the mainland and no longer wants to pay the fee, the Pirates would rob that Goldminer blind if they caught up with them. </span>
                                     <img className="text-gif-left" src="https://thegame.gold/assets/gif/5.gif"></img>
                                 </div>
                                 <span  className="text-gif" style={{marginTop:"30px"}}> Gold Hunt is a homage to the famous Wolf Game, which was hugely popular but had to deviate from the original plan and stop selling tokens. We coveted the best parts from the original game and brought the fight to a new reality, where barbaric Pirates and courageous Goldminers fight for gold on Treasure Island. Most of the mechanics will be well-known to those who’ve played before. So we invite you to delve into the revived and incredibly exciting adventure in order to play to the end, because we have fixed all the bugs and vulnerabilities of the original game that inspired us. </span>
                                 <p className="title-modal">CONTRACTS</p>
-                                <table _ngcontent-kji-c18="" class="contracts">
-                                        <tr><td className="table-td-setting">Goldminer / Pirate NFT:</td><td _ngcontent-kji-c18=""><a style={{color:"white",textDecoration: 'underline'}} target="_blank" rel="noopener noreferrer" href="https://etherscan.io/address/0x66fCA7555CD481545A5e66bA9a2bEC1e256F98e7">0x66fCA7555CD481545A5e66bA9a2bEC1e256F98e7</a></td></tr>
-                                        <tr><td className="table-td-setting">Island / Corsair Fleet Staking:</td><td _ngcontent-kji-c18=""><a style={{color:"white",textDecoration: 'underline'}}  target="_blank" rel="noopener noreferrer" href="https://etherscan.io/address/0x06217A2E76604CB63451AC98401B898af038d4b2">0x06217A2E76604CB63451AC98401B898af038d4b2</a></td></tr>
-                                        <tr><td className="table-td-setting"><span _ngcontent-kji-c18="" class="gold">$GGOLD</span> Token:</td><td _ngcontent-kji-c18=""><a style={{color:"white",textDecoration: 'underline'}}  target="_blank" rel="noopener noreferrer" href="https://etherscan.io/address/0x5c2E129ec58563c7206229fFb1aDb9dC29db915f">0x5c2E129ec58563c7206229fFb1aDb9dC29db915f</a></td></tr>
+                                <table _ngcontent-kji-c18="" className="contracts">
+                                        <tr className="row"><td className="table-td-setting">Goldminer / Pirate NFT:</td><td className="table-td-setting1"><a style={{color:"white",textDecoration: 'underline'}} target="_blank" rel="noopener noreferrer" href="https://etherscan.io/address/0x66fCA7555CD481545A5e66bA9a2bEC1e256F98e7">0x66fCA7555CD481545A5e66bA9a2bEC1e256F98e7</a></td></tr>
+                                        <tr className="row"><td className="table-td-setting">Island / Corsair Fleet Staking:</td><td className="table-td-setting1"><a style={{color:"white",textDecoration: 'underline'}}  target="_blank" rel="noopener noreferrer" href="https://etherscan.io/address/0x06217A2E76604CB63451AC98401B898af038d4b2">0x06217A2E76604CB63451AC98401B898af038d4b2</a></td></tr>
+                                        <tr className="row"><td className="table-td-setting"><span _ngcontent-kji-c18="" class="gold">$GGOLD</span> Token:</td><td className="table-td-setting1"><a style={{color:"white",textDecoration: 'underline'}}  target="_blank" rel="noopener noreferrer" href="https://etherscan.io/address/0x5c2E129ec58563c7206229fFb1aDb9dC29db915f">0x5c2E129ec58563c7206229fFb1aDb9dC29db915f</a></td></tr>
                                 </table>
                                 <p class="title-modal">THE TLDR</p>
-                                <span class="tldr col-lg-6 col-md-6 col-sm-8 col-xs-9">
-                                        <p> - There will only ever be 10,000 Gen 0, minted for 0.07 ETH each. The 40,000 Gen 1 are minted by mining <span className="gold">$GGOLD</span></p>
+                                <div class="tldr col-lg-6 col-md-10">
+                                        <p> - There will only ever be 10,000 Gen 0, minted for 0.07 ETH each. The 40,000 Gen 1 are minted by mining <span className="gold">$GGOLD</span></p><hr>
+                                        <p> - Goldminers can be staked in the Island to earn <span _ngcontent-swv-c18="" class="gold">$GGOLD</span> and pay a tax anytime they claim their <span _ngcontent-swv-c18="" class="gold">$GGOLD</span> earnings. </p>
                                         <p></p>
-                                        <p></p>
-                                </span>
-                      
+                                </div>
+                            </div>
                      
                         </div>
                         

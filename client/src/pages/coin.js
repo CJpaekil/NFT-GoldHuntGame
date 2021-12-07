@@ -14,7 +14,7 @@ export default function coin() {
                         <div>
                             <TotalMarketInfo />
                         </div>
-                        <div className="col-md-8 col-lg-8">
+                        <div className="col-md-7 col-lg-8">
                             <ListOfStakes />
                         </div>
                     </div>

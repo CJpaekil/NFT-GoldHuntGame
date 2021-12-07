@@ -149,8 +149,8 @@ export const Styles = styled.div` */
 }
 .modal-main-part
 {
-    font-weight: 500;
-    line-height: 18px;;
+    /* font-weight: 500;
+    line-height: 18px;; */
     margin:auto;
 }
 .modal-quit-content
@@ -197,17 +197,49 @@ export const Styles = styled.div` */
 }
 .text-gif-left
 {
-    width: 20%;
+    width: 25%;
     margin-bottom: 30px;
 }
 .tldr
 {
     font-family: Karma Suture;
-    width: 50%;
+    margin:auto;
+    /* width: 50%; */
 }
 .contracts
 {
     font-family: Karma Suture;
+}
+.table-td-setting
+{
+    width:40%;
+}
+.table-td-setting1
+{
+    width:60%;
+}
+
+@media(max-width:700px){
+    .text-gif-left
+    {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .text-gif-right
+    {
+        font-family: Karma Suture;
+        width:100%;
+    }
+    .table-td-setting
+    {
+        text-align: center;
+        width:100%;
+    }
+    .table-td-setting1
+    {
+        text-align: center;
+        width:100%;
+    }
 }
 /* ` */
 

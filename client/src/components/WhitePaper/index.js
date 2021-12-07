@@ -139,9 +139,24 @@ const Index = ({
                                 </table>
                                 <p class="title-modal">THE TLDR</p>
                                 <div class="tldr col-lg-6 col-md-10">
-                                        <p> - There will only ever be 10,000 Gen 0, minted for 0.07 ETH each. The 40,000 Gen 1 are minted by mining <span className="gold">$GGOLD</span></p><hr>
-                                        <p> - Goldminers can be staked in the Island to earn <span _ngcontent-swv-c18="" class="gold">$GGOLD</span> and pay a tax anytime they claim their <span _ngcontent-swv-c18="" class="gold">$GGOLD</span> earnings. </p>
-                                        <p></p>
+                                        <p> - There will only ever be 10,000 Gen 0, minted for 0.07 ETH each. The 40,000 Gen 1 are minted by mining <span className="gold">$GGOLD</span>.</p><br/>
+                                        <p> - Goldminers can be staked in the Island to earn <span _ngcontent-swv-c18="" class="gold">$GGOLD</span> and pay a tax anytime they claim their <span _ngcontent-swv-c18="" class="gold">$GGOLD</span> earnings.</p><br/>
+                                        <p> - If a Goldminer is unstaked from the Island, the Pirates try to steal all of its accumulated <span _ngcontent-swv-c18="" class="gold">$GGOLD</span>.</p><br/>
+                                        <p> - When a new Goldminer is hired, the Pirates attempt to kidnap it. If they’re successful, it’s given to a randomly selected Pirate, instead of the NFT owner who minted it </p>
+                                </div>
+                                <p class="title-modal">MINTING</p>
+                                <table class="minting">
+                                        <tr><th className="minting-table-th">TOKEN ID</th><th className="minting-table-th">MINTING COST</th></tr>
+                                        <tr><th className="minting-table-th">1 to 10,000 (Gen 0)</th><th className="minting-table-th">0.07 ETH</th></tr>
+                                        <tr><th className="minting-table-th">10,001 to 20,000</th><th className="minting-table-th">20,000 <span class="gold">$GGOLD</span></th></tr>
+                                        <tr><th className="minting-table-th">20,001 to 40,000</th><th className="minting-table-th">40,000 <span class="gold">$GGOLD</span></th></tr>
+                                        <tr><th className="minting-table-th">40,001 to 50,000</th><th className="minting-table-th">80,000 <span class="gold">$GGOLD</span></th></tr>
+                                </table>
+                                <p style={{marginTop: "30px"}}>The total cost to mint all of the Goldminers and Pirates in existence will be 1,800,000,000 <span _ngcontent-swv-c18="" class="gold">$GGOLD</span>.</p>
+                                <p class="title-modal">GOLDMINER</p>
+                                <div className="row text-gif">
+                                    <img className="text-gif-left" src="https://thegame.gold/assets/gif/1.gif"/>
+                                    <span className="text-gif-right"> You have a 90% chance of minting a Goldminer, each with unique traits. Below are the actions they can take. </span>
                                 </div>
                             </div>
                      

@@ -1,28 +1,42 @@
-import { useLayoutEffect } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Web3ReactProvider } from '@web3-react/core'
+import Web3 from 'web3'
 
 
-import Header from './components/layout/Header';
-import Home from './pages/Home';
-
+import React from "react";
 import './App.css';
+import Coin from './pages/coin';
+import CoinBill from './pages/coinBill';
+
+import {
+  BrowserRouter as Router, Switch,Route,} from "react-router-dom";
+// import styled, {ThemeProvider} from 'styled-components';
+// import {lightTheme, darkTheme, GlobalStyles} from './theme';
+
+// const StyledApp = styled.div`
+// color: ${props => props.theme.fontColor};
+// `
+
 
 function App() {
-  // const dispatch = useDispatch();
-  // const history = useHistory();
+//   const [ theme, setTheme] = useState("light");
+// const themeToggler = () => {
+//   theme === 'light' ? setTheme('dark') : setTheme("light");
+// }
 
-  useLayoutEffect(() => {
-    //dispatch(checkAuthenticate(history));
-  }, []);
   return (
-    <BrowserRouter>
-      <Header />
-      <div className="content">
-        <Switch>
-          <Route exact path="/" component={Home} />
-        </Switch>
-      </div>
-    </BrowserRouter>
+    <Web3ReactProvider>
+
+    <div className="App">
+      {/* <StyledApp> <button onClick={() => themeToggler()}>button</button> */}
+      <Router>
+      <Switch>
+      <Route path="/" component={Coin} />
+      <Route path="/coin-bill" component={CoinBill} />
+      </Switch>
+      </Router>
+      {/* </StyledApp> */}
+    </div>
+    </Web3ReactProvider>
   );
 }
 

@@ -9,10 +9,21 @@
 {
     justify-content: space-around;
 }
+.scroll3
+{
+    margin: 0px 15px;
+    margin-bottom: 10vh;
+    width: 100%;
+}
+
 .scroll
 {
     margin-bottom: 10vh;
     width: 100%;
+}
+.content-staking
+{
+    margin:auto;
 }
 .scroll-content
 {

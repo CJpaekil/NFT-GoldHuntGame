@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
+import Staking from '../Staking/staking';
 // import { FaTwitter, FaDiscord } from "react-icons/fa";
 // import Opemsea from '../../assets/images/opensea.png';
 import './style.css';
+
 // import { Link } from 'react-router-dom';
 
 // import { FaTwitter, FaDiscord, FaBars } from 'react-icons/fa'
@@ -10,77 +12,29 @@ import './style.css';
 // import OpenseaImg from '../../assets/images/opensea.png';
 //import { useSelector } from 'react-redux';
 
-const mint = ({ 
+const Mint = ({ 
 
 }) => {
-    // const ref = useRef(null)
 
-    // const history = useHistory();
-
-    // const [isSticky, setSticky] = useState(false)
-    // const [showNarrow, setShowNarrow] = useState(false)
-    // const [header_dropdown_menu, showDropDownMenu] = useState(false)
-
-    // const { toggle_sticky, walletAddress, accountBalance } = useSelector(state => state.connect)
-
-    // const handleScroll = () => {
-    //     setSticky( window.scrollY > 100 )
-    // };
-
-    // useEffect(() => {
-    //     window.addEventListener('scroll', handleScroll)
-    //     return () => {
-    //         window.removeEventListener('scroll', () => handleScroll)
-    //     };
-    // }, [])
-
-    // const getOffset = (el) => {
-    //     const rect = el.getBoundingClientRect();
-    //     return {
-    //         left: rect.left + window.scrollX,
-    //         top: rect.top + window.scrollY
-    //     };
-    // }
-
-    // const handleClickMenu = async (aid) => {
-    //     const elem = document.getElementById(aid)
-    //     if(elem !== null) {
-    //         const posY = getOffset(elem).top;
-    //         if(isSticky) {
-    //             window.scrollTo(window.scrollX, posY - 70)
-    //         } else {
-    //             window.scrollTo(window.scrollX, posY - 200)
-    //         }
-    //         history.push('/#' + aid)
-    //     } else {
-    //         history.push('/#' + aid)
-    //         await sleep(500);
-    //         handleNavigate(aid)
-    //     }
-    // }
-
-    // const sleep = (milliseconds) => {
-    //     return new Promise(resolve => setTimeout(resolve, milliseconds))
-    // }
-
-    // const handleNavigate = (aid) => {
-    //     const elem = document.getElementById(aid)
-    //     if(elem !== null) {
-    //         const posY = getOffset(elem).top;
-    //         if(isSticky) {
-    //             window.scrollTo(window.scrollX, posY - 70)
-    //         } else {
-    //             window.scrollTo(window.scrollX, posY - 200)
-    //         }
-    //         history.push('/#' + aid)
-    //     } 
-    // }
+    const [phantom, setPhantom] = useState(false);
+    const handleConnect = () => {
+        setPhantom(true);
+        window.solana.on("connect", () => console.log("connected!"))
+        if (window.solana.isConnected)
+        {
+            setPhantom(true);
+        }
+    };
 
     return (
         <div className="content single-scroll">
-            <div class="scroll">
+        {phantom?(
+            <Staking/>
+        ):(
+        <>
+            <div class="scroll content-staking col-lg-5 col-md-9 col-sm-9 col-xs-10">
                 <img src="https://thegame.gold/assets/images/scroll-stick.svg" class="scroll-stick"/>
-                <app-mint-block class="scroll-content">
+                <app-mint-block class="scroll-content"><p></p>
                             <span class="title">MINTING</span>
                             <div class="progress-block">
                                 <div class="progress-bar" style={{width: "58.3263%"}}></div>
@@ -90,10 +44,12 @@ const mint = ({
                                 <div class="progress-block-section" style={{borderRight:"none"}}>80.000 $GGOLD</div>
                             </div>
                             <span class="amount">26661 / 50000 MINTED</span>
-                            <button class="connect-button">CONNECT WALLET</button>
-                            <img src="https://thegame.gold/assets/images/wrinkle.svg" class="wrinkle"></img>
-                            <span class="title">GAME STATUS</span>
-                            <div class="status-block">
+                            
+                               
+                                <button class="connect-button" onClick={handleConnect}>CONNECT WALLET</button>
+                                <img src="https://thegame.gold/assets/images/wrinkle.svg" class="wrinkle"></img>
+                                <span class="title">GAME STATUS</span>
+                                <div class="status-block">
                                         <div class="status-block-item">
                                             <span class="status-block-item-label">GOLDMINER MINTED:</span>
                                             <span class="status-block-item-value">23986</span>
@@ -126,10 +82,14 @@ const mint = ({
                                             <span class="status-block-item-label">$GGOLD CLAIMED:</span>
                                             <span class="status-block-item-value">115299230</span>
                                         </div>
-                            </div>
+                                    </div>
+                          
+                            
                 </app-mint-block>
                 <img src="https://thegame.gold/assets/images/scroll-stick.svg" class="scroll-stick"></img>
             </div>
+            </>
+            )}
         </div>
        
 
@@ -138,4 +98,4 @@ const mint = ({
     )
 }
 
-export default mint;
+export default Mint;

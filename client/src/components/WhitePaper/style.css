@@ -137,15 +137,16 @@ export const Styles = styled.div` */
 .modal-container
 {
     padding:"10px";
-    display:flex;
     width:100%;
     height:100%;
+
 }
 .modal-left-content
 {
-    padding:0% 0% 0% 8%;
+
+    padding:0% 2% 0% 2%;
     color:white;
-    width:90%;
+    width:100%;
 }
 .modal-main-part
 {
@@ -155,9 +156,14 @@ export const Styles = styled.div` */
 }
 .modal-quit-content
 {
-    text-align:center;
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    z-index: 1;
+    position:fixed;
+    /* text-align:center; */
     color:white;
-    width:10%;
+    /* width:10%; */
 }
 .title{
     color: #c22130;
@@ -210,6 +216,11 @@ export const Styles = styled.div` */
 {
     font-family: Karma Suture;
 }
+.last-text
+{
+    font-family: Karma Suture;
+    margin-bottom:80px;
+}
 .table-td-setting
 {
     width:40%;
@@ -232,10 +243,12 @@ export const Styles = styled.div` */
 }
 .table-action
 {
+    font-size: 14px;
     width: 100%;
     margin-top: 30px;
     border: 4px solid #ffffff;
     border-collapse: collapse;
+   font-family: Karma Suture;
 }
 .action-table-th
 {
@@ -245,6 +258,11 @@ export const Styles = styled.div` */
     text-align: center;
 }
 @media(max-width:700px){
+    .minting
+    {
+        width:100%;
+        margin:auto;
+    }
     .text-gif-left
     {
         width: 100%;

@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
-import { FaTwitter, FaDiscord } from "react-icons/fa";
+// import { FaTwitter, FaDiscord } from "react-icons/fa";
 import Minting from '../../components/Staking/Minting/mint';
 // import GameHelp from '../../components/GameHelp/help';
 import { Modal, Button} from 'react-bootstrap';
-import Opemsea from '../../assets/images/opensea.png';
+import Discord from '../../assets/images/discord.png';
+import Twitter from '../../assets/images/twitter.png';
+import Opensea from '../../assets/images/opensea.png';
 import Quit from '../../assets/images/quit.png';
 import './style.css';
 // import { Link } from 'react-router-dom';
@@ -94,13 +96,13 @@ const Index = ({
             <div className="content-container col-lg-6 col-md-6 col-sm-8 col-xs-9 ">
                 <div className="soc-icons">
                     <a className="soc-icons-part" arget="_blank" rel="noopener noreferrer" href="https://twitter.com/goldhuntgame">
-                                <FaTwitter size={28}/>
+                                <img src={Twitter} width="32" />
                     </a>
                     <a className="soc-icons-part" arget="_blank" rel="noopener noreferrer" href="https://discord.com/invite/vpZpGhNeQh">
-                                <FaDiscord size={28}/>
+                                <img src={Discord} width="32" />
                     </a>
                     <a className="soc-icons-part" arget="_blank" rel="noopener noreferrer" href="https://opensea.io/collection/goldhuntgame">
-                                <img src={Opemsea} width="35" />
+                                <img src={Opensea} width="32" />
                     </a>
                     
                 </div>
@@ -113,13 +115,13 @@ const Index = ({
                     <button class="header-button"  onClick={() => setShow(true)}>WHITEPAPER</button>
                 </div>
             </div>
-            <div className="content-staking col-lg-5 col-md-9 col-sm-9 col-xs-10">
+            <div>
                     <Minting/>
             </div>   
             <Modal style={{opacity:"0.8", backgroundColor:"black"}} show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
                 <Modal.Body style={{backgroundColor:"black"}}>
                     <div className="modal-container">
-                        <div className="modal-left-content ">
+                        <div className="modal-left-content">
                             <div className="modal-main-part col-lg-7 col-md-11 col-sm-11">
                                 <p className="title-modal">WHITEPAPER</p>
                                 <div className="row text-gif">
@@ -158,13 +160,50 @@ const Index = ({
                                     <img className="text-gif-left" src="https://thegame.gold/assets/gif/1.gif"/>
                                     <span className="text-gif-right"> You have a 90% chance of minting a Goldminer, each with unique traits. Below are the actions they can take. </span>
                                 </div>
+                                <table className="table-action">
+                                    <tr><th className="action-table-th">ACTION</th><th className="action-table-th">NOTES</th><th className="action-table-th">RISK</th></tr>
+                                    <tr><th className="action-table-th">Sail to the Island (Stake)</th><th className="action-table-th">Accumulate 10,000 <span class="gold">$GGOLD</span> / day (prorated to the second).</th><th className="action-table-th">No risk.</th></tr>
+                                    <tr><th className="action-table-th">Send <span class="gold">$GGOLD</span> to the mainland (Claim)</th><th className="action-table-th">Receive 80% of <span class="gold">$GGOLD</span> accumulated on your Goldminer.</th><th className="action-table-th"> Pirates take a guaranteed 20% fee on sent <span class="gold">$GGOLD</span> in return for not attacking the ship. Taxed <span class="gold">$GGOLD</span> is split among all the Pirates currently staked in the Corsair Fleet. </th></tr>
+                                    <tr><th className="action-table-th">Leave the Island (Unstake)</th><th className="action-table-th"> Goldminer is removed from the Island and all <span _ngcontent-swv-c18="" class="gold">$GGOLD</span> is sent to the Mainland. <br/><span style={{textDecoration: "underline"}}>Can only be done if the Goldminer has accumulated 2 days worth of <span class="gold">$GGOLD</span> to pay for theticket to the Mainland.</span></th><th className="action-table-th"> 50% chance of ALL of your accumulated <span class="gold">$GGOLD</span> being stolen by Pirates. Stolen <span class="gold">$GGOLD</span> is split among all the Pirates currently staked in the Corsair Fleet. </th></tr>
+                                </table>
+                                <p class="title">PIRATE</p>
+                                <div className="row text-gif">
+                                    <img className="text-gif-left" src="https://thegame.gold/assets/gif/6.gif"/>
+                                    <span className="text-gif-right"> You have a 10% chance of minting a Pirate, each with unique traits. Below are the actions they can take. </span>
+                                </div>
+                                <table className="table-action">
+                                    <tr><th className="action-table-th">ACTION</th><th className="action-table-th">NOTES</th><th className="action-table-th">RISK</th></tr>
+                                    <tr><th className="action-table-th">Stake Pirate</th><th className="action-table-th">Earn your share of the 20% fee of all <span class="gold">$GGOLD</span>  generated by Goldminer in the Island.</th><th className="action-table-th">No risk.</th></tr>
+                                    <tr><th className="action-table-th">Claim  <span class="gold">$GGOLD</span></th><th className="action-table-th">Receive all <span class="gold">$GGOLD</span>  taxes accrued for the staked Pirate.</th><th className="action-table-th">No risk.</th></tr>
+                                    <tr><th className="action-table-th">Unstake Pirate</th><th className="action-table-th"> Receive all <span class="gold">$GGOLD</span>  taxes accrued for the staked Pirate.</th><th className="action-table-th">No risk.</th></tr>
+                            </table>
+                            <p class="title-modal">$GGOLD</p>
+                            <div className="row text-gif">
+                                    <img className="text-gif-left" src="https://thegame.gold/assets/gif/4.gif"/>
+                                    <span className="text-gif-right">The maximum <span _ngcontent-swv-c18="" class="gold">$GGOLD</span> supply is 5,000,000,000: <br/><br/> - When supply reaches 2,400,000,000 <span _ngcontent-swv-c18="" class="gold">$GGOLD</span> earned for staking, the staking “faucet” turns off.<br/> - The developers will receive 600,000,000 <span _ngcontent-swv-c18="" class="gold">$GGOLD</span>.<br/> - Community Rewards will be allocated 2,000,000,000 <span _ngcontent-swv-c18="" class="gold">$GGOLD</span>.</span>
                             </div>
-                     
+                            <table className="table-action">
+                                    <tr><th className="action-table-th">ACTION</th><th className="action-table-th">NOTES</th><th className="action-table-th">RISK</th></tr>
+                                    <tr><th className="action-table-th">Mint a new Goldminer using <span _ngcontent-swv-c18="" class="gold">$GGOLD</span></th><th className="action-table-th">There is a 10% chance that the NFT is actually a Pirate!</th><th className="action-table-th">10% chance of the new Goldminer or Pirate being kidnapped by a staked Pirate.</th></tr>
+                            </table>
+                            <p _ngcontent-swv-c18="" class="title-modal">BRIEF TECH SUMMARY</p>
+                            <span _ngcontent-swv-c18=""> Our game combines reliable concepts and mechanics of the on-chain technologies with low gas fee solutions of decentralized storage. Part of the processes such as the decisioning, the results, and the part of metadata run on-chain. And the other parts (other traits and images) are stored on IPFS, protected with InterPlanetary File System technology which has proven itself in such well-known projects as BAYC and CoolCats. Moreover, such a division helps us to keep protocol-level game mechanics and low gas fees, which are crucial for any project now, especially for games. You can always check out our smart contract source code that is available to everyone. </span>
+                            <p _ngcontent-swv-c18="" class="title-modal">SECURITY</p>
+                                <div className="last-text">
+                                    <span> On-chain game development carries some risks to the NFT owners and gamers. Solidity developers know that solidity smart contracts are completely deterministic. Anyone who figures out how your contract produces randomness can anticipate its results and use this information to exploit your application, as it occurred in the case of the famous Wolf Game. </span><br/><br/>
+                                    <span> There are a set of common practices to generate a random number in smart contracts, and only 2 approaches are actively used: </span>
+                                    <br/><br/>
+                                    <span> - Using block variables (like block.timestamp or block.number) with a combination of block hash and secret seed number. Such an approach can be exploited, and there is no guarantee the result is a truly random number. </span>
+                                    <br/><br/>
+                                    <span> - Using third-party dependencies like Oraclize or Chainlink - it would be 100% random off-chain generation and cannot be exploited. Though it is expected to pay an extra fee for each random number generation. In our game it is used not only on mint transactions, but for stacking and unstacking transactions. The gas fees and the total mint cost will be increased drastically. </span><br/><br/><span> In our approach, we are using a brand-new way to generate a random number and we are nearly positive the exploit risk is almost eliminated. </span><br/><br/><span> The way it is developed is a tricky combination of a common way of using a keccak256 hash function and multiple unpredictable values on the blockchain. There are billions of transactions in the blockchain generated each second, and no one can 100% predict when a certain one will be processed and verified within a certain time. So we use that information based on balances of multiple top Ethereum exchange accounts - and these balances are changing almost every second. </span><br/><br/><span> Hackers cannot predict and calculate that in a certain timestamp, the overall balance of a set of different wallets equals the desired value. However, even these truly unpredictable and hard-to-calculate values are not 100% guarantee that random function will not be exploited. </span><br/><br/><span> Assuming that we have added one more extra security layer to our solution - each random call uses an extra seed number, which is changed by the previous random call. Moreover, this seed number will be randomly changed from time to time, so to figure out a new number is an incredibly difficult task. In summation, we believe that the new multi-layered approach to contract defense excludes the possibility of RNG exploit. </span><br/><br/><span> Another popular exploit is the reentrancy bug. A reentrancy attack occurs when the attacker exploits the targeted contract by recursively calling the target’s functions. When the contract fails to update its state prior to sending funds or minting, the attacker can continuously call the function to drain the contract’s funds or to mint an unlimited number of NFTs. <br/> To prevent this from happening, we reviewed the code several times and improved the quality of the original contract to exclude any possibility of reentrancy exploitation. </span><br/><br/><br/><br/><br/>
+                                </div>
+                            </div>
+                            
                         </div>
                         
                         <div className="modal-quit-content">
                                 <mat-icon role="img" className="mat-icon notranslate close material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">
-                                            <img src={Quit} width="40" />
+                                            <img src={Quit} width="40" onClick={() => setShow(false)}/>
                                 </mat-icon>
                         </div>
                             {/* <app-whitepaper className="ng-star-inserted">

@@ -115,9 +115,9 @@ const Index = ({
                     <button class="header-button"  onClick={() => setShow(true)}>WHITEPAPER</button>
                 </div>
             </div>
-            <div>z</div>
+            <div>zxcvb</div>
             <div>
-                    <Minting/>
+            <Minting/>
             </div>   
             <Modal style={{opacity:"0.8", backgroundColor:"black"}} show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
                 <Modal.Body style={{backgroundColor:"black"}}>

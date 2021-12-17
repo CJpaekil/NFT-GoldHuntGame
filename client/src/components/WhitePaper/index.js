@@ -115,7 +115,7 @@ const Index = ({
                     <button class="header-button"  onClick={() => setShow(true)}>WHITEPAPER</button>
                 </div>
             </div>
-            <div>zxcdfgdcvbxcvxvdfg</div>
+            <div>zxcdfgdcvxvdfg</div>
             <div>
             <Minting/>
             </div>   
